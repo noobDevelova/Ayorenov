@@ -1,0 +1,24 @@
+@use "../base/" as *;
+
+.btn-primary {
+  padding: 10px 26px;
+  background: $linearBlack;
+  text-align: center;
+
+  .link {
+    color: $primaryText;
+    @include font-style(md, semibold, md, "text");
+  }
+}
+
+.btn-secondary {
+  border: 1px solid black;
+  align-self: self-start;
+  padding: 12px 36px;
+  text-align: center;
+
+  .link {
+    color: $secondaryText;
+    @include font-style(md, semibold, md, "text");
+  }
+}

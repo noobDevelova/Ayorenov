@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.flx-row {
+  display: flex;
+  flex-direction: row;
+}
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+$inter: "Inter", sans-serif;
+
+$primaryText: #fcfcfd;
+$secondaryText: #101828;
+$grey: #98a2b3;
+$linearBlack: linear-gradient(45deg, #101828 0%, #475467 100%);

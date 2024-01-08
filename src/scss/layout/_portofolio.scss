@@ -1,0 +1,35 @@
+@use "../base/" as *;
+@use "../components/navbar";
+@use "../components/button";
+@use "../components/footer";
+
+#portofolio {
+  margin-top: 120px;
+  margin-bottom: 60px;
+
+  h1 {
+    @include font-style(md, bold, md, "heading");
+    margin-bottom: 30px;
+  }
+
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    .grid-item {
+      background-color: $secondaryText;
+
+      p {
+        color: $primaryText;
+        @include font-style(sm, bold, sm, "text");
+        margin-block: 13px;
+        margin-left: 13px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

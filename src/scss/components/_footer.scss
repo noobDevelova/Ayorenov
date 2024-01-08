@@ -1,0 +1,43 @@
+@use "../base/" as *;
+
+#footer {
+  padding-block: 60px;
+  background: $linearBlack;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flx-right {
+    gap: 30px;
+    h3 {
+      color: $primaryText;
+      @include font-style(xs, bold, xs, "heading");
+    }
+
+    p {
+      @include font-style(lg, bold, lg, "text");
+      color: $primaryText;
+    }
+  }
+  .flx-left {
+    gap: 30px;
+
+    h3 {
+      color: $primaryText;
+      @include font-style(xs, bold, xs, "heading");
+    }
+    .ctn-wrapper {
+      gap: 13px;
+      .ctn-item {
+        p {
+          @include font-style(lg, medium, lg, "text");
+          color: $primaryText;
+        }
+        display: flex;
+        gap: 13px;
+      }
+    }
+  }
+}

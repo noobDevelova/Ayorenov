@@ -1,0 +1,10 @@
+@use "./base/" as *;
+@use "./layout/beranda";
+@use "./layout/layanan";
+@use "./layout/portofolio";
+@use "./layout/tentangkami";
+
+body {
+  font-family: $inter;
+  background-color: #fff;
+}

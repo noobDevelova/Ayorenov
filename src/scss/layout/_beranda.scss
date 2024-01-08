@@ -1,0 +1,89 @@
+@use "../base/" as *;
+@use "../components/navbar";
+@use "../components/button";
+@use "../components/footer";
+
+section#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .hero-wrapper {
+    align-items: center;
+  }
+
+  .flx-left {
+    width: 40%;
+    gap: 30px;
+
+    h1.hero-heading {
+      @include font-style(xl, bold, xl, "heading");
+      color: $secondaryText;
+    }
+
+    p.hero-subheading {
+      @include font-style(xl, regular, xl, "text");
+      color: $grey;
+      text-align: justify;
+    }
+  }
+
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+section#product {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 250px;
+
+  .flx-content {
+    align-items: end;
+    .flx-left {
+      justify-self: center;
+      width: 50%;
+      .product-wrapper {
+        gap: 30px;
+      }
+
+      h1.content-header {
+        @include font-style(lg, bold, lg, "heading");
+        margin-bottom: 40px;
+      }
+
+      .product-item {
+        gap: 20px;
+        align-items: center;
+
+        .desc {
+          gap: 10px;
+
+          h3.content-sub-header {
+            @include font-style(sm, bold, sm, "heading");
+          }
+          p.content-text {
+            text-align: justify;
+            @include font-style(lg, regular, lg, "text");
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+  }
+}

@@ -1,0 +1,80 @@
+@mixin font-weight($weight) {
+  $weights: (
+    thin: 100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+  );
+  $output: $weight;
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+  font-weight: $output;
+}
+
+@mixin font-style($size, $weight, $height, $type: "heading") {
+  $sizes: (
+    xl: 3.75rem,
+    lg: 3rem,
+    md: 2.25rem,
+    sm: 1.875rem,
+    xs: 1.5rem,
+  );
+
+  $weights: (
+    thin: 100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+  );
+
+  $heights: (
+    xl: 72px,
+    lg: 60px,
+    md: 44px,
+    sm: 38px,
+    xs: 32px,
+  );
+
+  $size-font: $size;
+  $weight-font: $weight;
+  $height-font: $height;
+
+  @if $type == "text" {
+    $sizes: (
+      xl: 1.25rem,
+      lg: 1.125rem,
+      md: 1rem,
+      sm: 0.875rem,
+      xs: 0.75rem,
+    );
+
+    $heights: (
+      xl: 30px,
+      lg: 28px,
+      md: 24px,
+      sm: 20px,
+      xs: 18px,
+    );
+  }
+
+  @if map-has-key($sizes, $size) {
+    $size-font: map-get($sizes, $size);
+  }
+  @if map-has-key($weights, $weight) {
+    $weight-font: map-get($weights, $weight);
+  }
+  @if map-has-key($heights, $height) {
+    $height-font: map-get($heights, $height);
+  }
+
+  font-size: $size-font;
+  font-weight: $weight-font;
+  line-height: $height-font;
+}
